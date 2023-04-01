@@ -1,3 +1,4 @@
 [submodule "src/wasm"]
 	path = src/wasm
 	url = https://github.com/yuasalily/rustwasm.git
+	branch = main
