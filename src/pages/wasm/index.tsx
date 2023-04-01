@@ -1,21 +1,15 @@
+import { Link } from "gatsby-link";
 import React from "react";
-import { useEffect, useState } from "react";
-import init, { is_prime } from "../../wasm/algorithms/pkg/algorithms"
+import { useEffect } from "react";
 
 export default function IsPrime() {
     useEffect(() => {
-        document.title = "素数判定"
-        init();
+        document.title = "アルゴリズム"
     }, [])
-    const [value, setValue] = useState(0)
     return (
         <>
-            <h2>素数判定</h2>
-            <input onChange={(e) => {
-                const v = Number(e.target.value)
-                setValue(Number(is_prime(BigInt(v))))
-            }} />
-            <div>{value == 0 ? "素数です" : "少なくとも" + value + "割り切れます"}</div>
+            <h2>アルゴリズム</h2>
+            <Link to="/wasm/isPrime">素数判定</Link>
         </>
     )
 }
