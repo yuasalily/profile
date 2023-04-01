@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Blog",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/node:1":{}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+			],
+			"settings": {
+				"files.autoSave": "onFocusChange",
+				"files.trimFinalNewlines": true,
+				"files.trimTrailingWhitespace": true,
+				"editor.minimap.enabled": false,
+				"editor.fontSize": 16,
+				"editor.bracketPairColorization.enabled": true,
+				"editor.copyWithSyntaxHighlighting": false,
+				"editor.formatOnSave": true,
+				"editor.inlayHints.enabled": "on",
+				"workbench.editor.enablePreview": false,
+				"workbench.editor.enablePreviewFromQuickOpen": false,
+				"workbench.tree.renderIndentGuides": "always"
+			}
+		}
+	},
+	"postCreateCommand": "apt update && npm install -g gatsby-cli",
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root"
+}
