@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import init, { is_prime } from "../../wasm/algorithms/pkg/algorithms"
+import init, { is_prime } from "../../../wasm/algorithms/pkg/algorithms"
 
 export default function IsPrime() {
     useEffect(() => {
