@@ -1,11 +1,11 @@
 import React from "react"
-import Layout from "../components/Layout"
+import H2 from "../components/H2";
 import InternalLink from "../components/InternalLink";
 
 export default function HomePage() {
   return (
     <>
-      <h1>Home</h1>
+      <H2 msg="Home" />
       <InternalLink to="/wasm" msg="Wasm" />
     </>
   );

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import H2 from "../../../components/H2";
 import InputNumber from "../../../components/InputNumber";
 import { prime_factorization } from "../../../wasm/algorithms/pkg/algorithms";
 
@@ -25,7 +26,7 @@ export default function PrimeFactorization() {
     const [value, setValue] = useState("");
     return (
         <>
-            <h2>素因数分解</h2>
+            <H2 msg="素因数分解" />
             <InputNumber onChangeFunction={(e: React.ChangeEvent<HTMLInputElement>) => {
                 setValue(prime_factorization(BigInt(e.target.value)))
             }} />

@@ -4,16 +4,13 @@
 	"name": "Blog",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/node:1":{}
+		"ghcr.io/devcontainers/features/node:1": {}
 	},
-
 	"customizations": {
 		"vscode": {
-			"extensions": [
-			],
+			"extensions": [],
 			"settings": {
 				"files.autoSave": "onFocusChange",
 				"files.trimFinalNewlines": true,
@@ -26,7 +23,10 @@
 				"editor.inlayHints.enabled": "on",
 				"workbench.editor.enablePreview": false,
 				"workbench.editor.enablePreviewFromQuickOpen": false,
-				"workbench.tree.renderIndentGuides": "always"
+				"workbench.tree.renderIndentGuides": "always",
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": true
+				}
 			}
 		}
 	},
