@@ -1,11 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import init, { is_prime } from "../../../wasm/algorithms/pkg/algorithms"
+import { is_prime } from "../../../wasm/algorithms/pkg/algorithms"
 
 export default function IsPrime() {
     useEffect(() => {
         document.title = "素数判定"
-        init();
     }, [])
     const [value, setValue] = useState(0)
     return (
